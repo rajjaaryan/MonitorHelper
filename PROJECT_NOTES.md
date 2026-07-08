@@ -170,3 +170,22 @@ the menu dropdown visuals; Start-at-Login across a real reboot; light-mode / Red
 - macOS 26.4.1 (Tahoe), Apple Silicon arm64; Swift 6.3.1; SDK 26.4.1.
 - Displays: external `LS27D70xE` 2560×1440 (main), built-in `Color LCD` 1470×956.
 - Original arrangement at session start: **below**, laptop origin `(519, 1440)`.
+
+---
+
+## 11. Version control / GitHub
+
+- **Repo:** https://github.com/rajjaaryan/MonitorHelper (**private**). `main` is the default branch.
+- **Committer identity (repo-local):** `rajjaaryan <rajaryan.des@gmail.com>`.
+  The machine's **global** identity is unchanged (`rajj <raj@angoor.ai>`) — used by all other repos.
+- **What's tracked:** source only. The compiled `MonitorHelper.app` is gitignored (regenerate with `build.sh`).
+- **Normal push flow:**
+  ```sh
+  git add -A && git commit -m "…"
+  git push                # upstream already set to origin/main
+  ```
+- **Auth note (multi-account gotcha):** this Mac had a *different* GitHub account (`rajaryan006`)
+  cached in the keychain, which caused "Repository not found" on the first push. It was cleared;
+  pushes now authenticate as **rajjaaryan** via the VS Code GitHub sign-in (Source Control →
+  Publish/Push) or a fine-grained PAT (Contents: read+write, scoped to this repo). If you ever
+  see "Repository not found" again, it's an auth-account mismatch, not a missing repo.
