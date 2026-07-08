@@ -1,0 +1,5 @@
+# Build output — the compiled app bundle (regenerate with build.sh)
+MonitorHelper.app/
+
+# macOS
+.DS_Store
